@@ -1,5 +1,7 @@
-How To Use This Tools ?
+How To Use This Subdomain Hunter ?
 Don't Worry I Will Show You
+
+Follow This >
 
 First open Your Linux Terminal, Then Type
 
