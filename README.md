@@ -5,7 +5,7 @@ Follow This >
 
 First open Your Linux Terminal, Then Type
 
-$ git clone https://github.com/rashedulhridoy/Sub-Domain-Hunter.git
+$ git clone https://github.com/rashedulhridoy/Subdomain-Hunter.git
 
 Then The Tools is Automatically Download
 
