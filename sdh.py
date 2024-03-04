@@ -1,7 +1,7 @@
 import requests
 import pyfiglet
 
-ascii_banner = pyfiglet.figlet_format("Sub Domain Hunter")
+ascii_banner = pyfiglet.figlet_format("Subdomain Hunter")
 print(ascii_banner)
 x = "Made By Rashedul Hridoy"
 print(x)
