@@ -1,7 +1,9 @@
 import requests
 import pyfiglet
 
-ascii_banner = pyfiglet.figlet_format("Subdomain Hunter")
+total_sub = 0
+
+ascii_banner = pyfiglet.figlet_format("Sub Domain Hunter")
 print(ascii_banner)
 x = "Made By Rashedul Hridoy"
 print(x)
@@ -19,7 +21,7 @@ print("> If You Find All Subdomains Then Tools With Automatic Stopped")
 print(space)
 
 
-with open("Subdomain.txt", "r") as sub:
+with open("D:/py/Subdomain.txt", "r") as sub:
     subdomains = sub.read().splitlines()
 
     for subdomain in subdomains:
@@ -30,9 +32,9 @@ with open("Subdomain.txt", "r") as sub:
             if response.status_code == 200:
                 print(url)
                 
+                total_sub += 1
 
         except Exception as e: 
                 pass
-                
-                
-                
+
+print(f"Scan Finished\nTotal Sub-Domain found: {total_sub}"")
