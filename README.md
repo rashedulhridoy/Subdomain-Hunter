@@ -12,7 +12,7 @@ Then The Tools is Automatically Download
 
 Then Type
 
-$ cd Sub-Domain-Hunter
+$ cd Subdomain-Hunter
 
 $ python sdh.py
 
