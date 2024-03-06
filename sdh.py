@@ -3,12 +3,19 @@ import pyfiglet
 
 total_sub = 0
 
+
+space =" "
+print(space)
+
 ascii_banner = pyfiglet.figlet_format("Sub Domain Hunter")
 print(ascii_banner)
 x = "Made By Rashedul Hridoy"
 print(x)
-space =" "
 print(space)
+c = "Special Credit: Syed Sakib Alam Mubin"
+print(c)
+print(space)
+
 
 domain = input("Enter Domain: ")
 
@@ -37,4 +44,4 @@ with open("Subdomain.txt", "r") as sub:
         except Exception as e: 
                 pass
 
-print(f"Scan Finished\nTotal Sub-Domain found: {total_sub}"")
+print(f"Scan Finished\nTotal Sub-Domain found: {total_sub}")
