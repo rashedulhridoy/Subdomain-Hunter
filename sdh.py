@@ -1,7 +1,6 @@
 import requests
 import pyfiglet
-
-total_sub = 0
+import concurrent.futures
 
 
 space =" "
@@ -27,7 +26,7 @@ print("> If You Find All Subdomains Then Tools With Automatic Stopped")
 
 print(space)
 
-
+"""
 with open("Subdomain.txt", "r") as sub:
     subdomains = sub.read().splitlines()
 
@@ -43,5 +42,24 @@ with open("Subdomain.txt", "r") as sub:
 
         except Exception as e: 
                 pass
+"""
+o = open("Subdomain.txt","r",encoding="utf8").readlines()
+def scan(x):
+        total_sub = 0
+        pay = x.strip()
+        url_P = f"http://{pay}.{domain}"
+        req = requests.get(url_P).status_code
+        try:
+           if req == 200:
+              print(f"\033[1;32m[+] FOUND     : {url_P}")
+              total_sub += 1
+           else:
+              print(f"\033[1;31m[!] NOT FOUND : {url_P}")
+        except Exception as e:
+              print(f"[+] ERROR : {e}")
+              exit()
+with concurrent.futures.ThreadPoolExecutor() as exe:
+        exe.map(scan,o)
+      
 
 print(f"Scan Finished\nTotal Sub-Domain found: {total_sub}")
