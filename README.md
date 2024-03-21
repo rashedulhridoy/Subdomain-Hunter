@@ -25,3 +25,8 @@ Sub Domain Hunter is Ready !
 Now Type Only Domain, Not Url.
 
 Like: google.com, facebook.com, yahoo.com etc.
+
+
+<h1> SCREEN SHORT </h1>
+<br>
+![image](https://github.com/rashedulhridoy/Subdomain-Hunter/assets/150352851/49f7fd51-c7c4-464b-8282-66c8ebe5b455)
