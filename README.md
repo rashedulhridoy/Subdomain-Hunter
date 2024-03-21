@@ -31,10 +31,5 @@ Like: google.com, facebook.com, yahoo.com etc.
 <br>
 <img src="https://github.com/rashedulhridoy/Subdomain-Hunter/assets/150352851/445d626b-9ce3-465b-9159-83f960115523">
 
-<style>
-  img{
-    height: 200px;
-    width: 300px; 
-  }
-</style>
+
 
