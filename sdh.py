@@ -11,7 +11,7 @@ print(ascii_banner)
 x = "Made By Rashedul Hridoy"
 print(x)
 print(space)
-c = "Special Credit: Syed Sakib Alam Mubin"
+c = "Special Credit: Syed Sakib Alam Mubin, " + "Nabil Rahman"
 print(c)
 print(space)
 
