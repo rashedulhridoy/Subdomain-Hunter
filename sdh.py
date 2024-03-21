@@ -1,6 +1,6 @@
 import requests
 import pyfiglet
-import concurrent.futures
+
 
 
 space =" "
@@ -11,22 +11,23 @@ print(ascii_banner)
 x = "Made By Rashedul Hridoy"
 print(x)
 print(space)
-c = "Special Credit: Syed Sakib Alam Mubin, " + "Nabil Rahman"
+c = "Special Credit: Syed Sakib Alam Mubin and " + "Nabil Rahman"
 print(c)
 print(space)
 
 
 domain = input("Enter Domain: ")
+total_sub = 0
 
 
 print(space)
 
 print("-----Scanning Started-----")
-print("> If You Find All Subdomains Then Tools With Automatic Stopped")
+print("> If You Find All Subdomains Then Tools With Automatic Stopped, " + "Be Patient")
 
 print(space)
 
-"""
+
 with open("Subdomain.txt", "r") as sub:
     subdomains = sub.read().splitlines()
 
@@ -42,24 +43,7 @@ with open("Subdomain.txt", "r") as sub:
 
         except Exception as e: 
                 pass
-"""
-o = open("Subdomain.txt","r",encoding="utf8").readlines()
-def scan(x):
-        total_sub = 0
-        pay = x.strip()
-        url_P = f"http://{pay}.{domain}"
-        req = requests.get(url_P).status_code
-        try:
-           if req == 200:
-              print(f"\033[1;32m[+] FOUND     : {url_P}")
-              total_sub += 1
-           else:
-              print(f"\033[1;31m[!] NOT FOUND : {url_P}")
-        except Exception as e:
-              print(f"[+] ERROR : {e}")
-              exit()
-with concurrent.futures.ThreadPoolExecutor() as exe:
-        exe.map(scan,o)
+
       
 
-print(f"Scan Finished\nTotal Sub-Domain found: {total_sub}")
+print(f"Scan Finished\n\033[1;32m Total Sub-Domain found: {total_sub}")
