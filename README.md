@@ -29,4 +29,5 @@ Like: google.com, facebook.com, yahoo.com etc.
 
 <h1> SCREENSHOT </h1>
 <br>
-<img src="https://i.ibb.co/M6yDyqs/Screenshot-2024-03-21-233733.jpg">
+(https://github.com/rashedulhridoy/Subdomain-Hunter/assets/150352851/445d626b-9ce3-465b-9159-83f960115523)
+
