@@ -27,7 +27,7 @@ print("> If You Find All Subdomains Then Tools With Automatic Stopped, Be Patien
 print(space)
 
 
-with open("D:/py/test.txt", "r") as sub:
+with open("Subdomain.txt", "r") as sub:
     subdomains = sub.read().splitlines()
 
     for subdomain in subdomains:
