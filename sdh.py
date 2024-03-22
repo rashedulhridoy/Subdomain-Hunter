@@ -1,7 +1,7 @@
 import requests
 import pyfiglet
+import concurrent.futures
 
-total_sub = 0
 
 space =" "
 print(space)
@@ -11,8 +11,13 @@ print(ascii_banner)
 x = "Made By Rashedul Hridoy"
 print(x)
 print(space)
-c = "Special Credit: Syed Sakib Alam Mubin, " + "Nabil Rahman"
+c = "Special Credit: Syed Sakib Alam Mubin"
 print(c)
+print(space)
+z = "Modified Credit: Nabil Rahman"
+
+print(z)
+
 print(space)
 
 
@@ -22,26 +27,28 @@ domain = input("Enter Domain: ")
 print(space)
 
 print("-----Scanning Started-----")
-print("> If You Find All Subdomains Then Tools With Automatic Stopped, Be Patient")
+print("> If You Find All Subdomains Then Tools With Automatic Stopped")
 
 print(space)
 
 
-with open("Subdomain.txt", "r") as sub:
-    subdomains = sub.read().splitlines()
-
-    for subdomain in subdomains:
-        url = f"http://{subdomain}.{domain}"
+o = open("Subdomain.txt","r",encoding="utf8").readlines()
+def scan(x):
+        
+        pay = x.strip()
+        url_P = f"http://{pay}.{domain}"
+        req = requests.get(url_P).status_code
         try:
-            response = requests.get(url)
-
-            if response.status_code == 200:
-                print(f"\033[1;32m[+] FOUND : {url}")
+           if req == 200:
+              print(f"\033[1;32m[+] FOUND     : {url_P}")
+           else:
+              print(f"\033[1;31m[!] NOT FOUND : {url_P}")
                 
-                total_sub += 1
+        except Exception as e:
+              print(f"[+] ERROR : ")
+              exit()
+with concurrent.futures.ThreadPoolExecutor() as exe:
+        exe.map(scan,o)
+      
 
-        except Exception as e: 
-                print(f"\033[1;31m[!] NOT FOUND : {url}")
-
-print("Scan Finished")
-print(f"Total Sub-Domain found: {total_sub}")
+print("Scan Finished\n")
