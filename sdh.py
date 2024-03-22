@@ -45,7 +45,7 @@ def scan(x):
               print(f"\033[1;31m[!] NOT FOUND : {url_P}")
                 
         except Exception as e:
-              print(f"[+] ERROR : ")
+              print(f"[+] ERROR : {e}")
               exit()
 with concurrent.futures.ThreadPoolExecutor() as exe:
         exe.map(scan,o)
