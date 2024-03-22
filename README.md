@@ -6,6 +6,8 @@ Follow This >
 
 First open Your Linux Terminal, Then Type
 
+```bash
+
 $ pip install requests
 
 $ pkg install git
@@ -19,6 +21,8 @@ Then Type
 $ cd Subdomain-Hunter
 
 $ python sdh.py
+
+```
 
 Sub Domain Hunter is Ready !
 
