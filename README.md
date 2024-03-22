@@ -13,7 +13,7 @@ $ pip install requests
 ```
 ```bash
 
-$ pkg install git
+$ apt install git
 
 ```
 
