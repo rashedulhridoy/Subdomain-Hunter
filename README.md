@@ -10,19 +10,36 @@ First open Your Linux Terminal, Then Type
 
 $ pip install requests
 
+```
+```bash
+
 $ pkg install git
 
+```
+
+```bash
+
 $ git clone https://github.com/rashedulhridoy/Subdomain-Hunter.git
+
+```
 
 Then The Tools is Automatically Download
 
 Then Type
 
+```bash
+
 $ cd Subdomain-Hunter
+
+```
+
+```bash
 
 $ python sdh.py
 
 ```
+
+
 
 Sub Domain Hunter is Ready !
 
